@@ -3,7 +3,7 @@
   <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
 </span>
 
-<!-- <header class="panel-cover" style="background-image: url({{ site.baseurl }}/images/cover.jpg)"> -->
+<!-- Original: <header class="panel-cover" style="background-image: url({{ site.baseurl }}/images/cover.jpg)"> -->
 <header class="panel-cover">
   <div class="panel-main">
 
@@ -16,15 +16,15 @@
         <hr class="panel-cover__divider">
         <p class="panel-cover__description">{{ site.description }}</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
-
+<!-- Nav -->
         <div class="navigation-wrapper">
-
+          <!--Blog btn-->
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog" class="blog-button">Blog</a></li>
+              <li class="navigation__item"><a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog" class="blog-button"><i class="icon icon-pencil"></i> Blog</a></li>
             </ul>
           </nav>
-
+          <!--Social Bttns-->
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
 
@@ -78,9 +78,17 @@
 
             </ul>
           </nav>
+          <!--Projects Btn-->
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#projects" title="Projects by {{ site.title.author }}" class="project-button">
+                  <i class="icon icon-monitor"></i> Projects</a>
+              </li>
+            </ul>
+          </nav>
 
         </div>
-
       </div>
 
     </div>

@@ -10,8 +10,7 @@ $(document).ready(function () {
   if (window.location.hash && window.location.hash == '#blog') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
-  // if you are not at the URL root or /index.html, collapse the menu panel
-  // if you are in '#blog' mode, collapse the menu panel
+  // if you are in '#project' mode, collapse the menu panel
   if (window.location.hash && window.location.hash == '#project') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
@@ -21,7 +20,7 @@ $(document).ready(function () {
   }
 
   // Click the blog link
-  $('a.blog-button').click(function (e) {
+  $('a.big-button').click(function (e) {
     // if .panel-cover is collapsed do nada
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return
 
@@ -46,9 +45,14 @@ $(document).ready(function () {
   })
 
   // click the blog button in the Nav-Wrapper
-  $('.navigation-wrapper .blog-button').click(function () {
-    $('.navigation-wrapper').toggleClass('visible') // toggle visibility of .nav-wrapper
-    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn') // toggle between list and X,  animated \ fadeIn
+  $('.navigation-wrapper a').click(function () {
+    // $('.navigation-wrapper').toggleClass('visible') // toggle visibility of .nav-wrapper
+    $('.btn-mobile-menu__icon').removeClass('animated fadeIn');
+    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn'); // toggle between list and X,  animated \ fadeIn
+    $('.navigation-wrapper').removeClass('animated'); 
+    $('.navigation-wrapper').removeClass('bounceInDown'); 
+    $('.navigation-wrapper').toggleClass('animated bounceOutUp');  // bounce it out   
+    
   })
 
 
@@ -57,8 +61,21 @@ $(document).ready(function () {
   $('.btn-mobile-menu').click(function () {
     // By default the btn-mobile-menu has classes="icon icon-list btn-mobile-menu__icon"
     // .nav wrapper toggles -   visible, animated, and bounceInDown
-    $('.navigation-wrapper').toggleClass('visible animated bounceInDown') 
+    // $('.navigation-wrapper').toggleClass('visible animated bounceInDown') 
+    const navWrap = $('.navigation-wrapper');
+    if ( navWrap.hasClass('bounceInDown') ){ // Nav is visible
+      navWrap.removeClass('animated'); 
+      navWrap.removeClass('bounceInDown'); 
+      navWrap.toggleClass('animated bounceOutUp');  // bounce it out
+    } else {
+      navWrap.removeClass('animated'); 
+      navWrap.removeClass('bounceOutUp');
+      navWrap.addClass('visible');
+      navWrap.toggleClass('animated bounceInDown');  // bounce out & show
+    }
+    
     // the nav icon will toggle - between icon-list<<-->>icon-x   animated and fadeIn
+    $('.btn-mobile-menu__icon').toggleClass('animated fadeIn')
     $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
   })
 });

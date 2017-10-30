@@ -1,3 +1,5 @@
+/* Jekyll U-know theme by @r-i-c-h based on the Uno theme. */
+
 @import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
 /* http://meyerweb.com/eric/tools/css/reset/
 	 v2.0 | 20110126
@@ -287,8 +289,10 @@ pre {
 
 .footer__copyright {
 	display: block;
-	margin-bottom: .7em; 
-	margin-left: .7em; 
+/* 	margin-bottom: .7em; 
+  margin-left: .7em; */
+  margin: 0 0.2em;
+  text-align: right;
 }
 	.footer__copyright a {
 		color: #a6a6a6;
@@ -325,7 +329,10 @@ hr {
 	margin-right: .5em; }
 
 .post-meta__tags {
-	margin-left: .4em; }
+  margin-left: .4em; 
+  font-size: 12px;
+  padding: 0 5px;
+}
 
 .post-meta__author {
 	margin-left: 1.5em; }
@@ -580,7 +587,9 @@ nav {
 	margin: 0 0 4em 0; }
 
 .pagination__page-number {
-	margin: 0;
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
 	font-size: .8em;
 	color: #999999; }
 
@@ -864,6 +873,8 @@ input[type="tel"] {
 		font-size: .9em; }
 
 	.btn, .navigation__item a {
-		display: block;
+    display: block;
+    margin: 5px 0;
+    white-space: nowrap;
 		margin-bottom: .4em; } 
 }

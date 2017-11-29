@@ -1,14 +1,16 @@
-/* TEAM */
-Developer & Designer: Josh Gerdes
+/* ATTRIBUTIONS */
+
+Jekyll-Uknow by Rich Werden 
+GitHub: https://github.com/r-i-c-h
+Site: http://richwerden.com
+
+Original Uno theme Dev/Designer: Josh Gerdes
 Twitter: @joshgerdes
 Site: http://joshgerdes.com
 Location: Minneapolis, MN, USA
-						
-/* THANKS */
-Name: Dale Anthony
 
 /* SITE */
-Last update: 2016/02/10
 Standards: HTML5, CSS3
 Components: Jekyll
-Software: Sublime Text, Photoshop
+Software: Sublime Text, VSCode
+Last Update: December 2017

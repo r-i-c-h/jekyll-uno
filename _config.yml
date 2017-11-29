@@ -32,6 +32,7 @@ paginate: 10
 permalink: /:year/:title/
 markdown: kramdown
 highlighter: rouge
+
 sass:
     sass_dir: _sass
     style: compressed
@@ -41,6 +42,11 @@ sass:
 #   input: GFM
 #   # do not replace newlines by <br>s
 #   hard_wrap: false
+
+# The following are for the jekyll-livereload gem setup to use it as a default.
+# If you don't want to use the livereload just delete the next two lines
+livereload: true
+reload_port: 5678
 
 plugins:
   - jekyll-paginate

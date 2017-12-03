@@ -1,8 +1,10 @@
 # jekyll-Uknow
-A fork of the minimalist and responsive Jekyll-Uno theme by [joshgerdes](http://joshgerdes.github.com) originally based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
+
+A fork of the minimalist and responsive Jekyll-Uno theme by [joshgerdes](http://joshgerdes.github.com) originally based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost. 
 > :warning:  This theme requires ruby and rubygems installed
 
-### Features
+## Features
+* Removed all jQuery dependencies
 * Clean layout
 * Resposive layout
 * Pagination
@@ -12,14 +14,30 @@ A fork of the minimalist and responsive Jekyll-Uno theme by [joshgerdes](http://
 * Categories listing page
 * Google Analytics integration
 * ?? Disqus integration ??
+* Due the use of CSS3 Transitions, as per [caniuse.com](https://caniuse.com/#feat=css-transitions) it won't work for 6.5% of the world's browsers (...forget anything before IE11!)
 
 ---
-1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
-2. Enter the folder: `cd jekyll-uno/`
-3. If you don't have bundler installed: `gem install bundler`
-3. Install Ruby gems: `bundle install`
-4. Start your local server
-  1. If you do not have the jekyll-livereload gem, start Jekyll server with: `bundle exec jekyll serve --watch`
-  2. If you _DO_ have the jekyll-livereload bundle, you can use `bundle exec jekyll serve --livereload --watch`
 
-### Copyright and licensed under [the MIT license](/LICENSE).
+1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
+1. Enter the folder: `cd jekyll-uno/`
+
+1. If you don't have bundler installed: `gem install bundler`
+1. Install Ruby gems: `bundle install`
+1. Start your local server
+  1.1 If you do not have the jekyll-livereload gem, start Jekyll server with: `bundle exec jekyll serve --watch`
+  1.1 If you _DO_ have the jekyll-livereload bundle, you can use `bundle exec jekyll serve --livereload --watch`
+
+### Copyright and licensed under [the MIT license](/LICENSE)
+
+---
+
+#### Ideas for the future:
+* Add Search Capability!
+* Handle browser 'back' button from `site.url/#blog` back to `site.url`
+  * https://www.oshyn.com/blogs/2011/december/javascript_navigation_using_hash_change____
+  * https://stackoverflow.com/questions/172957/detecting-back-button-hash-change-in-url
+  * https://gist.github.com/sstephenson/739659
+  * https://stackoverflow.com/questions/25806608/how-to-detect-browser-back-button-event-cross-browser
+  * https://www.webdesignerdepot.com/2013/03/how-to-manage-the-back-button-with-javascript/
+* Clean out extra SASS
+* Change dynamic media width from 960 to 720

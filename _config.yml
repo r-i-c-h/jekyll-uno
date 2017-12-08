@@ -9,7 +9,7 @@ title: Rich Werden
 description: "A simple site for Rich to write about code and archive some completed projects for future reference..." # 'Code Conquerer'
 url: 'https://github.com/r-i-c-h/r-i-c-h.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-# google_analytics: 'UA-XXXXXX-X'
+# google_analytics: 'UA-110851713-1'
 # disqus_shortname: 'your-disqus-name'
 
 author:

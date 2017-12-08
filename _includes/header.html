@@ -4,7 +4,17 @@
 </span>
 
 <!-- Original: <header class="panel-cover" style="background-image: url({{ site.baseurl }}/images/cover.jpg)"> -->
-<header class="panel-cover">
+{% if page.url == "/" or page.url == "/index.html" %}
+<header class="panel-cover" id="cabeza">
+  <script language="javascript">
+    if (window.location.hash && window.location.hash == '#blog') {
+      const theHeader = document.getElementById("cabeza");
+      theHeader.classList.add('panel-cover--collapsed');
+    }
+  </script>
+{% else %}
+<header class="panel-cover panel-cover--collapsed">
+{% endif %}
   <div class="panel-main">
 
     <div class="panel-main__inner panel-inverted">
@@ -22,7 +32,7 @@
           <nav class="cover-navigation">
             <ul class="navigation">
               <li class="navigation__item">
-                <a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog" class="blog-button" id="blogbutton"><i class="icon icon-pencil"></i> Blog</a>
+                <a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog" class="blog-button" id="blog-btn"><i class="icon icon-pencil"></i> Blog</a>
               </li>
             </ul>
           </nav>
@@ -87,7 +97,7 @@
           <nav class="cover-navigation">
             <ul class="navigation">
               <li class="navigation__item">
-                <a href="{{ site.baseurl }}" title="link to some projects by {{ site.author.name }}" class="blog-button" id="projbutton"><i class="icon icon-wrench"></i> Projects</a>
+                <a href="{{ site.baseurl }}" title="link to some projects by {{ site.author.name }}" class="blog-button" id="project-btn"><i class="icon icon-wrench"></i> Projects</a>
               </li>
             </ul>
           </nav>

@@ -2,6 +2,8 @@
 
 @import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
 @import "animate";
+@import "uknow-small";
+@import "uknow-medium";
 
 /* http://meyerweb.com/eric/tools/css/reset/ | v2.0 | 20110126 | License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -39,13 +41,15 @@ html, body {
 	height: 100%; }
 
 html {
+	overflow: hidden;
 	max-height: 100%; }
 body {
 	width: 100%;
 	*zoom: 1;
 	font-family: "Raleway", sans-serif;
 	font-size: 1em;
-	color: #666666; }
+	color: #666666; 
+	overflow: auto; }
 	body:before, body:after {
 		content: "";
 		display: table; }
@@ -281,10 +285,7 @@ pre {
 	
 .footer__copyright {
 	display: block;
-	/* margin-bottom: .7em; <<== uno.scss */
-	/* margin: 0 20px 10px 20px; <<== original main.scss */
-	/* MINE: \/\/\/\/ */
-	margin: 0 0.2em;  }
+	margin: 1rem 1rem;  }
 	.footer__copyright a {
 		color: #a6a6a6;
 		text-decoration: underline; }
@@ -386,11 +387,32 @@ hr {
 	background-size: cover; }
 
 .panel-cover--collapsed {
-	/* width: 40%; */
-	width: 30%;
+	width: 25%;
 	max-width: 530px; }
+	.panel-cover--collapsed .navigation-wrapper{
+		display: flex;
+		display: -webkit-flex;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-content: center;
+	}
 
-.panel-cover--overlay {
+	.panel-cover--collapsed ul {
+		
+	}
+	.panel-cover--collapsed .navigation__item a {
+		flex-grow: 1;
+		display: inline-flex;
+	}
+	
+	.panel-cover--collapsed .panel-cover__description {
+		display: none; }
+	.panel-cover--collapsed .panel-cover__divider--secondary {
+		display: none; } 
+	
+	.panel-cover--overlay {
 	display: block;
 	position: absolute;
 	z-index: 0;
@@ -451,7 +473,9 @@ hr {
 		color: #f0f0f0; }
 
 .cover-navigation {
-	margin-top: 10px; }
+	margin-top: 10px; 
+	flex-grow: 1;
+}
 
 .cover-navigation--social {
 	margin-left: 30px;
@@ -473,9 +497,6 @@ hr {
 	text-shadow: none;
 	color: #e25440;
 	-webkit-font-smoothing: antialiased; }
-	/* .btn:hover, .navigation__item a:hover {
-		color: #b9301c;
-		border-color: #b9301c; } */
 
 .btn-secondary {
 	border-color: #5ba4e5;
@@ -526,13 +547,14 @@ nav {
 .navigation {
 	display: inline-block;
 	/* Since float !== 'none', the box `display` is really automatically set to 'block' */
-	float: left;
+	/* float: left; */
 	position: relative;
 	margin: 0;
 	list-style-type: none; }
 
 .navigation__item {
 	display: inline-block;
+	align-content: center;
 	margin: 0 2px 0 0;
 	line-height: 1em; }
 	.navigation__item a {
@@ -549,10 +571,10 @@ nav {
 
 .navigation--social {
 	margin-left: 1.5em; 
-	/* ADDED RIGHT MARGIN */
 	margin-right: 1.5em; }
 	.navigation--social a {
-		padding: 6px 8px 6px 9px; }
+		border-radius: 100%;
+		padding: 6px 9px; }
 		.navigation--social a .label {
 			display: none; }
 		.navigation--social a .icon {
@@ -725,8 +747,9 @@ input[type="tel"] {
 
 @media all and (min-width: 1300px) {
 	.content-wrapper {
-		margin-left: 530px; } 
+		margin-left: 22rem; }
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 @media all and (max-width: 1100px) {
@@ -746,116 +769,5 @@ input[type="tel"] {
 	.navigation--social {
 		margin-top: 5px;
 		margin-left: 0;
-		/* ADDED RIGHT MARGIN */
 		margin-right: 0; } 
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media all and (max-width: 960px) {
-	.btn-mobile-menu {
-		display: block; }
-
-	.panel-main {
-		display: table;
-		position: relative; }
-
-	.panel-cover--collapsed {
-		width: 100%;
-		max-width: none; }
-
-	.panel-main__inner {
-		display: table-cell;
-		padding: 60px 10%; }
-
-	.panel-cover__description {
-		display: block;
-		max-width: 600px;
-		margin: 0 auto; }
-
-	.panel-cover__divider--secondary {
-		display: none; }
-
-	.panel-cover {
-		width: 100%;
-		height: 100%;
-		background-position: center center; }
-		.panel-cover.panel-cover--collapsed {
-			display: block;
-			position: relative;
-			height: auto;
-			padding: 0;
-			background-position: center center; }
-			.panel-cover.panel-cover--collapsed .panel-main__inner {
-				display: block;
-				padding: 70px 0 30px 0; }
-			.panel-cover.panel-cover--collapsed .panel-cover__logo {
-				width: 60px;
-				border-width: 2px; }
-			.panel-cover.panel-cover--collapsed .panel-cover__description {
-				display: none; }
-			.panel-cover.panel-cover--collapsed .panel-cover__divider {
-				display: none;
-				margin: 1em auto; }
-
-	.navigation-wrapper {
-		display: none;
-		position: fixed;
-		top: 42px;
-		right: 0;
-		left: 0;
-		width: 100%;
-		padding: 20px 0;
-		background: rgba(51, 51, 51, 0.98);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
-		.navigation-wrapper.visible {
-			align-items: center;
-		}
-
-	.cover-navigation {
-		display: block;
-		position: relative;
-		float: left;
-		clear: left;
-		width: 100%; }
-		.cover-navigation .navigation {
-			display: block;
-			width: 100%; }
-			.cover-navigation .navigation li {
-				width: 80%;
-				margin-bottom: .4em; }
-		.cover-navigation.navigation--social {
-			padding-top: 5px; }
-			.cover-navigation.navigation--social .navigation li {
-				display: inline-block;
-				width: 25.8%; }
-
-	.content-wrapper {
-		width: 80%;
-		max-width: none;
-		margin: 0 auto; }
-
-	.content-wrapper__inner {
-		margin-right: 0;
-		margin-left: 0; }
-
-	.navigation__item {
-		width: 100%;
-		margin: 0 0 .4em 0; } 
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media all and (max-width: 340px) {
-	.panel-main__inner {
-		padding: 0 5%; }
-
-	.panel-title {
-		margin-bottom: .1em;
-		font-size: 1.5em; }
-
-	.panel-subtitle {
-		font-size: .9em; }
-
-	.btn, 
-	.navigation__item a {
-    display: block;
-		margin-bottom: .4em; } 
 }

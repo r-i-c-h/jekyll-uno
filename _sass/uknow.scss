@@ -1,9 +1,7 @@
 /* Jekyll U-know theme by @r-i-c-h based on the Uno Jekylltheme. */
-
+/* !!! @imports for Mobile Styles are at the END of the file due to selector precedence !!! */
 @import 'https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
 @import "animate";
-@import "uknow-small";
-@import "uknow-medium";
 
 /* http://meyerweb.com/eric/tools/css/reset/ | v2.0 | 20110126 | License: none (public domain) */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -644,7 +642,7 @@ i {
 	margin-left: .5em; }
 
 .post-list__divider {
-	width: 30%;
+	width: 80%;
 	margin: 2.2em 0 2.1em 0;
 	border-top: 1px solid #dddddd; }
 
@@ -767,3 +765,6 @@ input[type="tel"] {
 		margin-left: 0;
 		margin-right: 0; } 
 }
+
+@import "uknow-340";
+@import "uknow-960";

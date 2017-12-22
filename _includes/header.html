@@ -5,14 +5,15 @@
 
 <!-- For background-image: <header class="panel-cover" style="background-image: url({{ site.baseurl }}/images/cover.jpg)"> -->
 {% if page.url == "/" or page.url == "/index.html" %}
-  <header class="panel-cover">
-    <script>//Stops display flashing if going directly url({{ site.baseurl }}#blog:
-    if (window.location.hash && window.location.hash == '#blog') {
-      document.getElementById("side-nav").classList.add('panel-cover--collapsed');
+  <header class="panel-cover" id="grey-panel" >
+    <script>
+    // Stops display flashing if going directly to url({{ site.baseurl }}#blog:
+    if ( window.location.hash && window.location.hash === '#blog' ) {
+      document.getElementById("grey-panel").classList.add('panel-cover--collapsed');
     }
-  </script>
+    </script>
 {% else %}
-  <header class="panel-cover panel-cover--collapsed" id="side-nav">
+  <header class="panel-cover panel-cover--collapsed" id="grey-panel">
 {% endif %}
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
@@ -39,14 +40,14 @@
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
               
-              {% if site.author.github_username %}
-                <!-- GitHub -->
-                <li class="navigation__item">
-                  <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
-                    <i class="icon icon-social-github"></i>
-                    <span class="label">GitHub</span>
-                  </a>
-                </li>
+            {% if site.author.github_username %}
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
             {% endif %}
             
             {% if site.author.facebook_username %}

@@ -27,9 +27,10 @@ defaults:
         layout: 'post'
 
 # Build settings
+include: ["_exproj"]
 destination: _site
 paginate: 10
-permalink: /:year/:title/
+permalink: /:year/:title.html
 markdown: kramdown
 highlighter: rouge
 

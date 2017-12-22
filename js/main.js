@@ -4,42 +4,65 @@ sitemap:
   exclude: 'yes'
 ---
 
-/* I didn't put the jQuery in there, it came that way. I'm afraid to remove it lest it break something... */
+const panel = document.getElementById('magic-panel')
+const hasCollapsed = () => { return panel.classList.contains('panel-cover--collapsed') }
+const addCollapsed = () => { panel.classList.add('panel-cover--collapsed') }
+const shrinkPanel = () => {
+  document.getElementsByClassName('navigation-wrapper')[0].style.flexDirection = 'column'
+  document.getElementsByClassName('panel-cover__description')[0].style.display = 'none'
+  document.getElementsByClassName('panel-cover__divider--secondary')[0].style.display = 'none'
+  panel.style.width = '25%' // Animation via CSS Transition
+}
 
-$(document).ready(function () {
-  if (window.location.hash && window.location.hash == '#blog') {
-    $('.panel-cover').addClass('panel-cover--collapsed')
-  }
+const mainContent = document.getElementsByClassName('content-wrapper')[0]
+const mobileTopBar = document.getElementById('mobile-menu-topbar')
 
-  if ( $('.panel-cover').width() < 960 ) {
-    $('.panel-cover').addClass('panel-cover--collapsed')
-  }
+if (window.location.hash && window.location.hash == '#blog') {
+  addCollapsed()
+}
 
-  if ( $('.panel-cover').hasClass('panel-cover--collapsed') ) {
-    $('.panel-cover__description').remove()
-    $('.panel-cover__divider--secondary').remove()
-  }
+if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
+  addCollapsed()
+}
 
-  $('a.blog-button').click(function (e) {
-    if ( $('.panel-cover').hasClass('panel-cover--collapsed') ) return
-    if ( $('.panel-cover').width() < 960 ) {
-      $('.panel-cover').addClass('panel-cover--collapsed')
-    } else {
-      // >=960
-      $('.panel-cover').css('max-width',  $('.panel-cover').width())
-    }
-    $('.content-wrapper').hide()
-    $('.panel-cover').animate({'max-width': '530px', 'width': '25%'}, 400, swing = 'swing', function () {
-      $('.content-wrapper').show()
-      $('.content-wrapper').addClass('animated slideInRight')
-    })
-    $('.panel-cover').addClass('panel-cover--collapsed');
-    $('.panel-cover__description').remove()
-    $('.panel-cover__divider--secondary').remove()
+const projectBtn = document.getElementById('project-btn')
+projectBtn.addEventListener('click', (e) => { e.preventDefault() })
+const loadProjectPage = () => { window.location.href = '{{ site.baseurl }}/projects/' }
+
+const bigButtons = document.getElementsByClassName('big-button')
+for (let i = 0 ; i < bigButtons.length; i++) {
+  bigButtons[i].addEventListener('click', (e) => {
+    if ( hasCollapsed() && (e.target === projectBtn) ) loadProjectPage()
+    if ( hasCollapsed() ) return
+
+    if ( panel.clientWidth < 960 ) {
+      addCollapsed()
+    } else { 
+        // if project button, change window.location after panel is done with transition
+        if ( e.target === projectBtn ) {
+          mainContent.style.display = 'none'
+          panel.addEventListener('transitionend', (e) => {
+            loadProjectPage()
+          }, true)
+        }
+        shrinkPanel()
+      }
+      if ( e.target === document.getElementById('blog-btn') ) {
+        mainContent.style.display = 'block'
+        mainContent.classList.add('animated') // $('.content-wrapper').addClass('animated slideInRight')
+        mainContent.classList.add('slideInRight')
+      }
   })
+} // endFor 
 
-  $('.btn-mobile-menu').click(function () {
+  
+/*   $('.btn-mobile-menu').click(function () {
     $('.navigation-wrapper').toggleClass('visible animated bounceInDown')
     $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
   })
-})
+ */
+/*  $('.navigation-wrapper .blog-button').click(function () {
+    $('.navigation-wrapper').toggleClass('visible')
+    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
+  })
+ */

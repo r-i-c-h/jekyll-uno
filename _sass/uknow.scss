@@ -570,9 +570,14 @@ nav {
 		opacity: .8; }
 		.navigation__item a:hover {
 			color: #2d2d2d;
-			background-color: #ffffff;
+			background-color: #eeeeee;
 			border-color: #0a0a0a;
 			opacity: 1; }
+		.navigation__item a:active {
+		  color: #eeeeee;
+			background: none;
+			border-color: #eeeeee;
+			opacity: .8; }
 
 .navigation--social {
 	display: flex;

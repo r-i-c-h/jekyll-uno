@@ -33,11 +33,9 @@ A fork of the minimalist and responsive Jekyll-Uno theme by [joshgerdes](http://
 
 #### Ideas for the future:
 * Add Search Capability!
+* Change dynamic media width from 960 to 720
 * Handle browser 'back' button from `site.url/#blog` back to `site.url`
   * https://www.oshyn.com/blogs/2011/december/javascript_navigation_using_hash_change____
   * https://stackoverflow.com/questions/172957/detecting-back-button-hash-change-in-url
   * https://gist.github.com/sstephenson/739659
-  * https://stackoverflow.com/questions/25806608/how-to-detect-browser-back-button-event-cross-browser
-  * https://www.webdesignerdepot.com/2013/03/how-to-manage-the-back-button-with-javascript/
-* Clean out extra SASS
-* Change dynamic media width from 960 to 720
+* Use and abuse some prebaked [Font-Awesome Animations](https://l-lin.github.io/font-awesome-animation/)

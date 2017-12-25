@@ -266,9 +266,9 @@ pre {
 
 .content-wrapper {
 	z-index: 800;
-	width: 60%;
-	max-width: 900px;
-	margin-left: 25%; }
+	width: 75%;
+	max-width: 1000px;
+	margin-left: 24%; }
 
 .content-wrapper__inner {
 	margin: 0 10%;
@@ -631,7 +631,7 @@ i {
 	list-style-type: none;
 	text-align: left; }
 	.post-list li {
-		margin: 0 0 2.2em 0; }
+		margin: 0 0 1rem 0; }
 		.post-list li:last-child hr {
 			display: none; }
 
@@ -660,7 +660,7 @@ i {
 
 .post-list__divider {
 	width: 80%;
-	margin: 2.2em 0 2.1em 0;
+	margin: 0.5em 0 0 0;
 	border-top: 1px solid #dddddd; }
 
 *:focus {

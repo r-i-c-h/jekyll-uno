@@ -4,7 +4,7 @@ layout: default
 <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="{{ page.date | date: "%-d %b %Y" }}" class="post-meta__date date">{{ page.date | date: "%-d %b %Y" }}</time>
+      <time datetime="{{ page.date | date: "%-d %b %Y" }}" class="post-meta__date date">{% assign d = page.date | date: "%-d"  %}{{ page.date | date: "%B" }} {% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd {% else %}{{ d }}th{% endcase %}, {{ page.date | date: "%Y" }}</time>
       {% if page.tags.size > 0 %}
       &#8226; <span class="post-meta__tags">re: {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">&nbsp;{{ tag }}</a> {% endfor %}</span>
       {% endif %}

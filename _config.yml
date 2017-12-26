@@ -34,15 +34,13 @@ permalink: /:year/:title.html
 markdown: kramdown
 highlighter: rouge
 
+kramdown:
+  input: GFM # use Github Flavored Markdown
+  hard_wrap: false  # do not replace newlines by <br>s
+
 sass:
     sass_dir: _sass
     style: compressed
-
-# kramdown:
-#   # use Github Flavored Markdown
-#   input: GFM
-#   # do not replace newlines by <br>s
-#   hard_wrap: false
 
 # The following are for the jekyll-livereload gem setup to use it as a default.
 # If you don't want to use the livereload just delete the next two lines

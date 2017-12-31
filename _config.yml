@@ -1,19 +1,19 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# "bundle exec jekyll serve". If you change this file, please restart the server process.
 
 # Site settings
 # Accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Rich Werden
-description: "A simple site for Rich to write about code and archive some completed projects for future reference..." # 'Code Conquerer'
-url: 'https://github.com/r-i-c-h/r-i-c-h.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+description: "A simple site for Rich to write about code and archive some completed projects for future reference..."
+url: "https://github.com/r-i-c-h/r-i-c-h.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-# google_analytics: 'UA-110851713-1'
-# disqus_shortname: 'your-disqus-name'
+# google_analytics: "UA-110851713-1"
+# disqus_shortname: "your-disqus-name"
 
 author:
-  name: 'Rich Werden'
+  name: "Rich Werden"
   email: rich_@t_richwerden.com
   twitter_username: the_riz
   github_username:  r-i-c-h
@@ -21,10 +21,10 @@ author:
 
 defaults:
   - scope:
-      path: ''
-      type: 'posts'
+      path: "
+      type: "posts"
     values:
-        layout: 'post'
+        layout: "post"
 
 # Build settings
 include: ["_exproj"]
@@ -43,9 +43,9 @@ sass:
     style: compressed
 
 # The following are for the jekyll-livereload gem setup to use it as a default.
-# If you don't want to use the livereload just delete the next two lines
-livereload: true
-reload_port: 5678
+# If you don"t want to use the livereload just delete the next two lines
+# livereload: true
+# reload_port: 5678
 
 plugins:
   - jekyll-paginate

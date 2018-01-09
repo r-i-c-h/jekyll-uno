@@ -2,7 +2,7 @@
 title:  "&#35TIL&#58 Semantically Modify Text Inside A Header"
 subtitle: ""
 date:   2017-11-01 12:00:01
-categories: [rw, TIL]
+categories: [rw, TIL, webdev]
 tags: [TIL, webdev, HTML, CSS, jekyll]
 ---
 Was pleasantly surprised to find out that vanilla HTML allows you to use semantic markup tags to modify header text in the middle of an `<h#> </h#>` heading tag. Mind you this is probably not the best idea I've ever had, but it _can_ give you a discount on finding a crazy CSS selector and is cleaner than writing `<span>`s with their own classes in the middle of some text... I'm only going to note a few of the tags I'd find useful, but I'm imagining you'd be ok using any of the tags listed in the **Inline Text Semantics**[^1] section of [this MDN page on HTML Elements][page].

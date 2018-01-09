@@ -1,8 +1,8 @@
 ---
 title:  "CSS Text on Fire"
 date:   2017-09-10 15:04:23
-categories: [css, webdev]
-tags: [css, neato]
+categories: [webdev]
+tags: [CSS, neato]
 ---
 While the site [CSSNewbie.com][site] doesn't always have the best executions, I am enamored with [this particular text-effect][fire]. By using different offset drop shadows[^n], the text is made to look like it is _en fuego_ and it works pretty well as a visual trick...
 

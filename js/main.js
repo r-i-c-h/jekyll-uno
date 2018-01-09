@@ -106,7 +106,11 @@ for (let i = 0; i < bigButtons.length; i++) {
 
       mainContent.style.display = 'none'
       const endOfTransition = whichEndEventName();
-      panel.addEventListener( endOfTransition, (e) => { loadProjectPage() });
+      panel.addEventListener( endOfTransition, 
+          (e) => { 
+            setTimeout( ()=>{ loadProjectPage() }, 750) // delay for smoothing out animation stuttering
+          } 
+      );
       panel.style.width = '25%' /* Animation via CSS Transition */
     }
   })

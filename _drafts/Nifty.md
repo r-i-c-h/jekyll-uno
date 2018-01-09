@@ -1,0 +1,1 @@
+Nifty - https://explainshell.com/about

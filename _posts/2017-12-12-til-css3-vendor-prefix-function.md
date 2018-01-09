@@ -2,7 +2,7 @@
 title:  "&#35TIL&#58 CSS3 Vendor-Prefix Function"
 subtitle: "The man is keeping your code down"
 date:   2017-11-29 12:00:01
-categories: [rw, webdev]
+categories: [rw, webdev, TIL]
 tags: [TIL, webdev, CSS, HTML, JS, code, SASS, SCSS]
 ---
 As I am pretty into transitions and animations being core to contemporary user-experience, I think about all of the 'gotchas' with vendor-prefixing that is [sometimes][shouldIprefix] [required][caniuse] by 'older' or not-that-older browsers...

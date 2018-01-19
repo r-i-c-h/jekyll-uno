@@ -3,7 +3,7 @@ title:  "&#35TIL&#58 Chrome Debugger Element History trick"
 subtitle: ""
 date:   2018-01-04 12:00:01
 categories: [rw, TIL, webdev, code]
-tags: [CSS, neato, HTML, chrome, debugging, javascript, SASS, SCSS, markdown
+tags: [CSS, HTML, chrome, debugging, javascript, SASS, SCSS]
 ---
 Was recently reminded of this Chrome debugger trick that I knew once upon a time I but obviously forgot about.
 

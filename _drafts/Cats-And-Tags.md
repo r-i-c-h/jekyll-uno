@@ -2,8 +2,8 @@
 title:  "Cats and Tags"
 subtitle: "It's a Sign"
 date:   2017-12-25 12:00:01
-categories: [rw, webdev]
-tags: [TIL, webdev, jekyll, github]
+categories: [rw, webdev, TIL]
+tags: [TIL, jekyll, github]
 ---
 Categories:
 webdev
@@ -12,27 +12,25 @@ TIL
 javascript
 backend
 frontend
-coding
-
-node
-jekyll
-mac
-CSS
-neato
-TIL
 code
-javascript
-jQuery
+
+chrome
+CSS
+debugging
 express
-HTML
-jekyll
 git
 github
+HTML
+jekyll
+jekyll
+jQuery
 mac
+mac
+markdown
+neato
+node
 os x
 safari
-chrome
-debugging
 SASS
 SCSS
-markdown
+TIL

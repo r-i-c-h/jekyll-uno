@@ -6,6 +6,9 @@ Insane Tools:
 * [codepen.io](http://codepen.io) - (My personal preference) 
 * [jsfiddle.net](http://jsfiddle.net)
 * [codesandbox.io](https://codesandbox.io/) - **React Specific**
+* [https://plnkr.co/edit/](https://plnkr.co/edit/) - Sorta Angular Specific
+* [https://stackblitz.com/](https://stackblitz.com/) - Full IDE
+* [https://runkit.com/home](https://runkit.com/home) - NodeJS playground _with **npm**_ libraries.
 
 ## JAVASCRIPT Visualizations:
 * See The **JS CALL STACK**: [Visualize basic code execution](pythontutor.com/javascript.html#mode=edit) through the stack (** - yes it is a pythontutor link)
@@ -54,18 +57,19 @@ Insane Tools:
 * [CSS Accordion-Menu helper](http://accordionslider.com/)[^2]
 
 ## Website-Building RESOURCES that are cheap as _FREE_....
-ICONS - http://fontawesome.io/ - 
-ICONS / SVG: https://leungwensen.github.io/svg-icon/ 
-ICONS / SVG: https://thenounproject.com - SVG  Searchable Icon Database - CC-atrib or purchaseable for like $1.99
-BACKGROUND - https://www.patterncooler.com/  - Repeatable Background Patterns made from small images.
-BACKGROUND - https://www.transparenttextures.com/ - Um, transparent textures. ⫸ Comes from https://www.toptal.com/designers/subtlepatterns/
-PHOTOS - https://www.pexels.com/
-PHOTOS - https://unsplash.com/ 
-PLACEHOLDER PHOTOS - http://www.placecage.com/
-PLACEHOLDER PHOTOS - http://www.placekitten.com/
-PLACEHOLDER PHOTOS - http://www.fillmurray.com/
-PLACEHOLDER PHOTOS - http://www.stevensegallery.com/
-PLACEHOLDER PHOTOS - https://placeholder.com/
+* HTML - http://htmlshell.com/ - Super quick Vanilla HTML Shell
+* ICONS - http://fontawesome.io/ - 
+* ICONS / SVG: https://leungwensen.github.io/svg-icon/ 
+* ICONS / SVG: https://thenounproject.com - SVG  Searchable Icon Database - CC-atrib or purchaseable for like $1.99
+* BACKGROUND - https://www.patterncooler.com/  - Repeatable Background Patterns made from small images.
+* BACKGROUND - https://www.transparenttextures.com/ - Um, transparent textures. ⫸ Comes from https://www.toptal.com/designers/subtlepatterns/
+* PHOTOS - https://www.pexels.com/
+* PHOTOS - https://unsplash.com/ 
+* PLACEHOLDER PHOTOS - http://www.placecage.com/
+* PLACEHOLDER PHOTOS - http://www.placekitten.com/
+* PLACEHOLDER PHOTOS - http://www.fillmurray.com/
+* PLACEHOLDER PHOTOS - http://www.stevensegallery.com/
+* PLACEHOLDER PHOTOS - https://placeholder.com/
 
 ---
 
@@ -81,3 +85,7 @@ https://cssmatic.com/noise-texture
 
 Honorable mention - https://galactic.ink/bg/
 http://www.stripegenerator.com/
+
+#CODING THINGIES:
+Whiteboard - https://awwapp.com/
+https://codeshare.io/ Realtime Code Sharing - w/Video Conferencing

@@ -14,6 +14,8 @@ backend
 frontend
 code
 
+dev
+devops
 chrome
 CSS
 debugging
@@ -22,9 +24,7 @@ git
 github
 HTML
 jekyll
-jekyll
 jQuery
-mac
 mac
 markdown
 neato

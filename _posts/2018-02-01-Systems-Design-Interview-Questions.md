@@ -5,7 +5,7 @@ date: 2018-02-01 12:00:01
 categories: [webdev, code, backend]
 tags: [dev, devops, ops]
 ---
-The below list is adapted/augmented from an article on Hackernoon - [Top 10 System Design Interview Questions for Software Engineers][hackernoonPost]. (Imagine all of the below bullet-points have an implied 'How To' in front of them if not explicitly written. Thnx.)
+The below list is adapted/augmented from an article on Hackernoon - [Top 10 System Design Interview Questions for Software Engineers][hackernoonPost]. Also worth reading is the same author's [article on how to approach answering][how2] these sorts of quests. (Imagine all of the below bullet-points have an implied 'How To' in front of them if not explicitly written. Thnx.)
 
 ## 1. Design TinyURL or bitly
 ### A URL shortening service
@@ -99,3 +99,4 @@ The below list is adapted/augmented from an article on Hackernoon - [Top 10 Syst
 ### For all of the above: How to handle creating a widget that can be easily embedded into a third party website (Like a facebook-like button, or a Tweet embed)
 
 [hackernoonPost]: https://hackernoon.com/top-10-system-design-interview-questions-for-software-engineers-8561290f0444
+[how2]: https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f
